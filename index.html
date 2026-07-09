@@ -1,352 +1,611 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>gpt-relay-hub | Free2AI GitBook Style AI Relay Docs</title>
-  <meta name="description" content="Free2AI GPT relay and ChatGPT relay documentation page for GPT5.5 access, OpenAI API proxy routes, low-cost AI calls, AIGC tasks, automation testing and bilingual AI relay content. Free2AI GPT relay 与 ChatGPT 中转文档页，面向 GPT5.5、OpenAI API proxy、低成本 AI 调用、AIGC、自动化测试和中英双语导航。">
-  <meta name="keywords" content="gpt-relay-hub, Free2AI, free2ai, GitBook style docs, AI relay, free AI relay, AI gateway, AI proxy, ChatGPT relay, ChatGPT 中转, OpenAI API, OpenAI relay, OpenAI 中转, GPT5.5, GPT API, GPT 中转, AIGC, AIGC 工具, AI API, 免费 AI, 免费 AI 中转, 白嫖 AI, 低成本 AI API, 超低价 AI, API proxy, model gateway, developer AI tools, automation AI, 自动化脚本, AI 工具测试, 中英双语 AI 文档">
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <meta name="author" content="gpt5free">
-  <link rel="canonical" href="https://gpt5free.github.io/gpt-relay-hub/">
-  <meta property="og:locale" content="zh_CN">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="gpt-relay-hub | Free2AI GitBook Style AI Relay Docs">
-  <meta property="og:description" content="Free2AI GPT relay and ChatGPT relay documentation page for GPT5.5 access, OpenAI API proxy routes, low-cost AI calls, AIGC tasks, automation testing and bilingual AI relay content. Free2AI GPT relay 与 ChatGPT 中转文档页，面向 GPT5.5、OpenAI API proxy、低成本 AI 调用、AIGC、自动化测试和中英双语导航。">
-  <meta property="og:url" content="https://gpt5free.github.io/gpt-relay-hub/">
-  <meta property="og:site_name" content="gpt-relay-hub">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="gpt-relay-hub | Free2AI GitBook Style AI Relay Docs">
-  <meta name="twitter:description" content="Free2AI GPT relay and ChatGPT relay documentation page for GPT5.5 access, OpenAI API proxy routes, low-cost AI calls, AIGC tasks, automation testing and bilingual AI relay content. Free2AI GPT relay 与 ChatGPT 中转文档页，面向 GPT5.5、OpenAI API proxy、低成本 AI 调用、AIGC、自动化测试和中英双语导航。">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "gpt-relay-hub | Free2AI GitBook Style AI Relay Docs",
-    "url": "https://gpt5free.github.io/gpt-relay-hub/",
-    "description": "Free2AI GPT relay and ChatGPT relay documentation page for GPT5.5 access, OpenAI API proxy routes, low-cost AI calls, AIGC tasks, automation testing and bilingual AI relay content. Free2AI GPT relay 与 ChatGPT 中转文档页，面向 GPT5.5、OpenAI API proxy、低成本 AI 调用、AIGC、自动化测试和中英双语导航。",
-    "keywords": "gpt-relay-hub, Free2AI, free2ai, GitBook style docs, AI relay, free AI relay, AI gateway, AI proxy, ChatGPT relay, ChatGPT 中转, OpenAI API, OpenAI relay, OpenAI 中转, GPT5.5, GPT API, GPT 中转, AIGC, AIGC 工具, AI API, 免费 AI, 免费 AI 中转, 白嫖 AI, 低成本 AI API, 超低价 AI, API proxy, model gateway, developer AI tools, automation AI, 自动化脚本, AI 工具测试, 中英双语 AI 文档",
-    "inLanguage": ["zh-CN", "en"],
-    "author": {"@type": "Organization", "name": "gpt5free"},
-    "publisher": {"@type": "Organization", "name": "Free2AI"},
-    "isPartOf": {"@type": "WebSite", "name": "Free2AI", "url": "https://free2ai.pages.dev/"}
-  }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030712">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Free2AI - 免费 AI API 中转站 | GPT5.5 Claude Gemini 低成本调用</title>
+  <meta name="description" content="Free2AI 提供免费试用友好的 AI API 中转导航，快速进入 GPT5.5、Claude、Gemini、OpenAI API 与 AIGC 工具低成本调用入口。">
+  <meta name="keywords" content="free ai,ai api,gpt api,gpt5,claude,gemini,openai api,chatgpt relay,ai gateway,api proxy,ai-router,aigc tools,free ai relay">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      color-scheme: light;
-      --bg: #ffffff;
-      --surface: #ffffff;
-      --soft: #f8fafc;
-      --text: #111827;
-      --muted: #667085;
-      --faint: #98a2b3;
-      --line: #e5e7eb;
-      --line-strong: #d0d5dd;
-      --blue: #2563eb;
-      --blue-soft: #eff6ff;
-      --code: #f6f8fa;
-      --sidebar: #fbfbfc;
-      --shadow: 0 1px 2px rgba(16, 24, 40, .04);
+      --bg: #030712;
+      --bg-surface: rgba(17, 24, 39, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-hover: rgba(255, 255, 255, 0.2);
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+      --primary: #3b82f6;
+      --primary-glow: rgba(59, 130, 246, 0.5);
+      --secondary: #8b5cf6;
+      --accent: #22d3ee;
+      --success: #10b981;
+      --warning: #f59e0b;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
+    
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      padding: 0;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       color: var(--text);
-      background: var(--bg);
-      font-size: 15px;
-      line-height: 1.75;
+      background-color: var(--bg);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
     }
-    a { color: var(--blue); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .topbar {
-      position: sticky;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Animated Background */
+    .bg-mesh {
+      position: fixed;
       top: 0;
-      z-index: 20;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 0 24px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(12px);
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      background: var(--bg);
     }
-    .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
-    .logo {
-      width: 30px; height: 30px; border-radius: 8px;
-      display: grid; place-items: center;
-      background: linear-gradient(135deg, #111827, #2563eb);
-      color: #fff; font-weight: 800; font-size: 13px;
+    
+    .bg-mesh::before, .bg-mesh::after {
+      content: '';
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      animation: float 20s infinite alternate ease-in-out;
     }
-    .brand-text { min-width: 0; }
-    .brand-title { font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 46vw; }
-    .brand-sub { color: var(--muted); font-size: 12px; margin-top: -2px; }
-    .top-actions { display: flex; align-items: center; gap: 10px; }
-    .search {
-      width: 240px; max-width: 28vw; height: 38px;
-      border: 1px solid var(--line); border-radius: 10px;
-      padding: 0 12px; color: var(--muted); background: var(--soft);
-      display: flex; align-items: center; gap: 8px; font-size: 13px;
+    
+    .bg-mesh::before {
+      background: var(--primary);
+      top: -200px;
+      left: -200px;
     }
-    .lang {
-      display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--soft);
+    
+    .bg-mesh::after {
+      background: var(--secondary);
+      bottom: -200px;
+      right: -200px;
+      animation-delay: -10s;
     }
-    .lang button {
-      border: 0; background: transparent; color: var(--muted); cursor: pointer;
-      height: 30px; padding: 0 12px; border-radius: 999px; font-weight: 700; font-size: 13px;
+
+    .bg-mesh .orb {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: var(--accent);
+      filter: blur(150px);
+      opacity: 0.1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 15s infinite alternate ease-in-out;
     }
-    .lang button.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
-    .layout { display: grid; grid-template-columns: 270px minmax(0, 1fr) 240px; min-height: calc(100vh - 64px); }
-    .sidebar {
-      position: sticky; top: 64px; height: calc(100vh - 64px); overflow: auto;
-      border-right: 1px solid var(--line); background: var(--sidebar); padding: 20px 16px;
+
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(100px, 100px) scale(1.2); }
     }
-    .side-label { color: var(--faint); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin: 4px 8px 10px; }
-    .nav a {
-      display: flex; align-items: center; gap: 8px;
-      padding: 8px 10px; border-radius: 8px; color: #344054; font-size: 14px;
+
+    @keyframes pulse {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 0.08; }
+      100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.15; }
     }
-    .nav a:hover { background: #f1f5f9; text-decoration: none; }
-    .nav a.active { color: var(--blue); background: var(--blue-soft); font-weight: 700; }
-    .dot { width: 5px; height: 5px; border-radius: 999px; background: currentColor; opacity: .7; }
-    .content-wrap { min-width: 0; }
-    .content {
-      width: min(760px, calc(100% - 48px));
+
+    /* Layout */
+    .container {
+      width: min(1200px, 100% - 40px);
       margin: 0 auto;
-      padding: 48px 0 80px;
+      padding: 30px 0 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
     }
-    .doc-meta { color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
-    .pill { border: 1px solid var(--line); background: var(--soft); border-radius: 999px; padding: 4px 10px; }
-    .markdown h1 { font-size: 2.35rem; line-height: 1.15; letter-spacing: -.03em; margin: 0 0 22px; }
-    .markdown h2 { font-size: 1.45rem; line-height: 1.3; margin: 38px 0 14px; padding-top: 8px; border-top: 1px solid transparent; }
-    .markdown h3 { font-size: 1.08rem; margin: 28px 0 10px; }
-    .markdown p { margin: 0 0 16px; color: #344054; }
-    .markdown ul, .markdown ol { padding-left: 22px; margin: 0 0 18px; color: #344054; }
-    .markdown li { margin: 6px 0; }
-    .markdown code { background: var(--code); border: 1px solid var(--line); border-radius: 6px; padding: 2px 5px; font-size: .92em; }
-    .markdown pre { overflow: auto; background: #0f172a; color: #e5e7eb; padding: 16px; border-radius: 12px; }
-    .markdown pre code { border: 0; background: transparent; color: inherit; padding: 0; }
-    .markdown blockquote { margin: 18px 0; padding: 0 0 0 14px; border-left: 3px solid var(--line-strong); color: var(--muted); }
-    .markdown hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
-    .markdown table { width: 100%; border-collapse: collapse; display: block; overflow: auto; margin: 20px 0; }
-    .markdown th, .markdown td { border: 1px solid var(--line); padding: 9px 11px; text-align: left; }
-    .markdown a { font-weight: 500; }
-    .rightbar {
-      position: sticky; top: 64px; height: calc(100vh - 64px); overflow: auto;
-      border-left: 1px solid var(--line); padding: 28px 18px; background: #fff;
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      border-radius: 32px;
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%);
+      border: 1px solid var(--border);
+      padding: 40px 40px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      opacity: 0;
+      transform: translateY(30px);
     }
-    .toc-title { color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
-    .toc a { display: block; color: var(--muted); font-size: 13px; line-height: 1.4; padding: 6px 0 6px 10px; border-left: 2px solid transparent; }
-    .toc a:hover { color: var(--blue); text-decoration: none; }
-    .toc a.active { color: var(--blue); border-left-color: var(--blue); font-weight: 700; }
-    .quick-card { margin-top: 28px; border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: var(--soft); }
-    .quick-card h3 { margin: 0 0 8px; font-size: 14px; }
-    .quick-card a { display: block; font-size: 13px; margin: 6px 0; }
-    .mobile-menu { display: none; border: 1px solid var(--line); background: var(--soft); border-radius: 9px; height: 36px; padding: 0 10px; }
-    .error { color: #b42318; background: #fff1f3; border: 1px solid #fecdca; border-radius: 12px; padding: 14px; }
-    @media (max-width: 1060px) {
-      .layout { grid-template-columns: 240px minmax(0, 1fr); }
-      .rightbar { display: none; }
+
+
+
+    .hero-content {
+      max-width: 900px;
     }
-    @media (max-width: 760px) {
-      .topbar { padding: 0 14px; }
-      .search { display: none; }
-      .mobile-menu { display: inline-flex; align-items: center; }
-      .layout { display: block; }
-      .sidebar { display: none; position: fixed; z-index: 30; left: 0; right: 0; top: 64px; height: calc(100vh - 64px); }
-      .sidebar.open { display: block; }
-      .content { width: min(100% - 32px, 760px); padding: 34px 0 56px; }
-      .markdown h1 { font-size: 2rem; }
-      .brand-title { max-width: 54vw; }
+
+    .headline {
+      font-size: clamp(40px, 6vw, 76px);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .headline .gradient-text {
+      background: linear-gradient(135deg, #fff 0%, #a5b4fc 50%, #67e8f9 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      animation: shine 4s linear infinite;
+    }
+
+    .subheadline {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 800px;
+    }
+    
+    .subheadline strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 32px;
+      height: 56px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: #030712;
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+      animation: btnPulse 2s infinite;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px var(--primary-glow);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      border: 1px solid var(--border);
+    }
+    
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tag {
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      color: #cbd5e1;
+      font-size: 13px;
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .tag:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--border-hover);
+      color: #fff;
+    }
+
+    /* Features Section */
+    .features-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      animation: fadeIn 1s ease-out 0.3s forwards;
+      opacity: 0;
+    }
+
+    .features-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      background: linear-gradient(to right, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .features-header p {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(255,255,255,0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border-hover);
+      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.4);
+      background: rgba(30, 41, 59, 0.8);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .card.wide {
+      grid-column: span 2;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    
+    .card.wide:hover {
+      border-color: rgba(59, 130, 246, 0.6);
+    }
+
+    .card.wide h3 {
+      font-size: 24px;
+      color: var(--accent);
+    }
+
+    .highlight {
+      color: #fff;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--primary);
+      opacity: 0.4;
+      border-radius: 2px;
+    }
+
+    /* Notice & Footer */
+    .notice {
+      margin-top: 20px;
+      padding: 24px;
+      border-radius: 20px;
+      background: rgba(245, 158, 11, 0.05);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      color: #fbbf24;
+      font-size: 14px;
+      line-height: 1.7;
+      display: flex;
+      gap: 16px;
+      animation: fadeIn 1s ease-out 0.6s forwards;
+      opacity: 0;
+    }
+    
+    .notice-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 0 20px;
+      color: var(--text-muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+      animation: fadeIn 1s ease-out 0.8s forwards;
+      opacity: 0;
+    }
+
+    /* Animations */
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes shine {
+      to { background-position: 200% center; }
+    }
+
+    @keyframes btnPulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+      70% { box-shadow: 0 0 0 12px rgba(255, 255, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+    }
+
+    .particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 10px rgba(103, 232, 249, 0.8);
+      animation: float-up linear infinite;
+    }
+    
+    @keyframes float-up {
+      0% { transform: translateY(100vh) scale(0); opacity: 0; }
+      20% { opacity: 1; transform: translateY(80vh) scale(1); }
+      80% { opacity: 1; transform: translateY(20vh) scale(1); }
+      100% { transform: translateY(-100px) scale(0); opacity: 0; }
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .card.wide {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 0 40px;
+        gap: 40px;
+      }
+      .hero {
+        padding: 30px 24px;
+      }
+      .features-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .card.wide {
+        grid-column: span 1;
+      }
+      .actions {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <button class="mobile-menu" id="menuBtn" type="button">目录</button>
-      <div class="logo">AI</div>
-      <div class="brand-text">
-        <div class="brand-title">gpt-relay-hub</div>
-        <div class="brand-sub">Free2AI documentation</div>
-      </div>
-    </div>
-    <div class="top-actions">
-      <div class="search">Search docs / 搜索文档</div>
-      <div class="lang" aria-label="Language switch">
-        <button id="zhBtn" class="active" type="button">中文</button>
-        <button id="enBtn" type="button">EN</button>
-      </div>
-    </div>
-  </header>
-
-  <div class="layout">
-    <aside class="sidebar" id="sidebar">
-      <div class="side-label">Documentation</div>
-      <nav class="nav" id="sideNav">
-        <a class="active" href="https://gpt5free.github.io/gpt-relay-hub/"><span class="dot"></span>gpt-relay-hub</a>
-        <a href="https://free2ai.pages.dev/" target="_blank" rel="noopener noreferrer"><span class="dot"></span>Free2AI 主站</a>
-        <a href="https://pay.kklt.lol/" target="_blank" rel="noopener noreferrer"><span class="dot"></span>推荐中转服务</a>
-        <a href="https://t.me/kkscshop" target="_blank" rel="noopener noreferrer"><span class="dot"></span>官方售后 TG</a>
-        <a href="https://github.com/gpt5free/gpt-relay-hub" target="_blank" rel="noopener noreferrer"><span class="dot"></span>GitHub Repository</a>
-      </nav>
-    </aside>
-
-    <main class="content-wrap">
-      <article class="content">
-        <div class="doc-meta">
-          <span class="pill">GitHub Pages</span>
-          <span class="pill">中英双语 README</span>
-          <span class="pill">AI Relay Docs</span>
-        </div>
-        <section class="markdown" id="markdown">Loading README...</section>
-      </article>
-    </main>
-
-    <aside class="rightbar">
-      <div class="toc-title">On this page</div>
-      <nav class="toc" id="toc"></nav>
-      <div class="quick-card">
-        <h3>Quick links</h3>
-        <a href="https://free2ai.pages.dev/" target="_blank" rel="noopener noreferrer">Free2AI</a>
-        <a href="https://pay.kklt.lol/" target="_blank" rel="noopener noreferrer">Relay Service</a>
-        <a href="https://github.com/gpt5free/gpt-relay-hub" target="_blank" rel="noopener noreferrer">Repository</a>
-      </div>
-    </aside>
+  <!-- Animated Background -->
+  <div class="bg-mesh">
+    <div class="orb"></div>
   </div>
 
+  <main class="container">
+    <section class="hero">
+
+
+      <div class="hero-content">
+        <h2 class="headline"><span class="gradient-text">免费 AI API 中转</span><br>低成本调用 GPT5.5 / Claude</h2>
+        <p class="subheadline">
+          <strong>不用到处找失效链接。</strong>Free2AI 聚合 AI API 中转、GPT5.5、Claude、Gemini、OpenAI API、ChatGPT relay 与 AIGC 工具入口，适合开发测试、自动化脚本、机器人和内容生成工作流快速接入。
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="https://pay.kklt.lol/" target="_blank" rel="noopener noreferrer">GPT5.6通道</a>
+          <a class="btn btn-secondary" href="https://fuckme.443.hk/" target="_blank" rel="noopener noreferrer">Claude4.8通道</a>
+          <a class="btn btn-secondary" href="https://free2ai.pages.dev/" target="_blank" rel="noopener noreferrer">打开 Free2AI 免费导航</a>
+          <a class="btn btn-ghost" href="https://t.me/kkscshop" target="_blank" rel="noopener noreferrer">电报客服咨询</a>
+        </div>
+
+        <div class="tags">
+          <span class="tag">免费试用</span>
+          <span class="tag">AI API</span>
+          <span class="tag">GPT5.5</span>
+          <span class="tag">Claude</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">AIGC 工具</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features-header">
+        <h2>为什么适合直接收藏</h2>
+        <p>面向 AI 用户、开发者和 AIGC 创作者</p>
+      </div>
+      
+      <div class="grid">
+        <article class="card">
+          <h3>免费试用优先</h3>
+          <p>先测试、再决定，适合想快速体验 GPT5.5、Claude、Gemini 和 OpenAI API 的用户。</p>
+        </article>
+        
+        <article class="card">
+          <h3>低成本 API 中转</h3>
+          <p>聚合 <span class="highlight">AI API / api proxy</span> 入口，适合预算敏感的开发和测试场景。</p>
+        </article>
+        
+        <article class="card">
+          <h3>一站式跳转</h3>
+          <p>服务入口、免费导航、电报客服都放在首屏，打开页面就能直接进入，不再翻群、翻帖、翻历史链接。</p>
+        </article>
+        
+        <article class="card wide">
+          <h3>主推入口推荐</h3>
+          <p><span class="highlight">pay.kklt.lol</span> 是当前页面重点推荐的 AI 中转服务入口；<br><span class="highlight">free2ai.pages.dev</span> 是免费 AI 中转导航主站，适合长期收藏和快速查看。</p>
+        </article>
+        
+        <article class="card">
+          <h3>覆盖更多 AIGC 场景</h3>
+          <p>适合 ChatGPT relay、OpenAI API relay、自动化脚本、AI 工具测试、机器人、内容生成和轻量项目接入。</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="notice">
+      <div class="notice-icon">⚠️</div>
+      <div>
+        <strong>免责声明：</strong>本页面仅为 AI API 中转信息导航与入口展示，不是 OpenAI、Anthropic、Google 或任何模型厂商的官方服务。使用第三方中转服务前，请自行核验价格、额度、隐私协议、服务条款和稳定性。
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <p>Free2AI · 免费 AI API 中转导航 · https://free2ai.pages.dev/</p>
+    </footer>
+  </main>
+
   <script>
-    (function () {
-      var mdEl = document.getElementById('markdown');
-      var tocEl = document.getElementById('toc');
-      var sidebar = document.getElementById('sidebar');
-      var menuBtn = document.getElementById('menuBtn');
-      var zhBtn = document.getElementById('zhBtn');
-      var enBtn = document.getElementById('enBtn');
-      var current = 'zh';
+    // 3D Tilt Effect for Cards
+    const tiltElements = document.querySelectorAll('.hero, .card');
+    tiltElements.forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Calculate tilt angles
+        const rotateX = ((y - centerY) / centerY) * -4;
+        const rotateY = ((x - centerX) / centerX) * 4;
+        
+        el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        el.style.transition = 'none';
+      });
+      
+      el.addEventListener('mouseleave', () => {
+        el.style.transform = '';
+        el.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease';
+      });
+      
+      el.addEventListener('mouseenter', () => {
+        el.style.transition = 'transform 0.1s ease';
+      });
+    });
 
-      function escapeHtml(str) {
-        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-      }
-
-      function slugify(text, index) {
-        return 'section-' + index + '-' + encodeURIComponent(text.toLowerCase().replace(/\s+/g, '-')).replace(/%/g, '').slice(0, 40);
-      }
-
-      function inline(text) {
-        var escaped = escapeHtml(text);
-        escaped = escaped.replace(/([^]+)/g, '<code>$1</code>');
-        escaped = escaped.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-        escaped = escaped.replace(/&lt;(https?:\/\/[^&\s]+)&gt;/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
-        return escaped;
-      }
-
-      function renderMarkdown(src) {
-        var lines = src.replace(/\r\n/g, '\n').split('\n');
-        var html = [];
-        var headings = [];
-        var inUl = false;
-        var inOl = false;
-        var inCode = false;
-        var codeBuf = [];
-        var headingCount = 0;
-
-        function closeLists() {
-          if (inUl) { html.push('</ul>'); inUl = false; }
-          if (inOl) { html.push('</ol>'); inOl = false; }
-        }
-
-        lines.forEach(function (line) {
-          var trimmed = line.trim();
-          if (trimmed.indexOf('`') === 0) {
-            if (inCode) {
-              html.push('<pre><code>' + escapeHtml(codeBuf.join('\n')) + '</code></pre>');
-              inCode = false;
-              codeBuf = [];
-            } else {
-              closeLists();
-              inCode = true;
-            }
-            return;
-          }
-          if (inCode) { codeBuf.push(line); return; }
-          if (!trimmed) { closeLists(); return; }
-          if (/^---+$/.test(trimmed)) { closeLists(); html.push('<hr>'); return; }
-
-          var heading = trimmed.match(/^(#{1,6})\s+(.*)$/);
-          if (heading) {
-            closeLists();
-            headingCount += 1;
-            var level = heading[1].length;
-            var text = heading[2];
-            var id = slugify(text, headingCount);
-            headings.push({ id: id, text: text, level: level });
-            html.push('<h' + level + ' id="' + id + '">' + inline(text) + '</h' + level + '>');
-            return;
-          }
-
-          if (/^[-*+]\s+/.test(trimmed)) {
-            if (inOl) { html.push('</ol>'); inOl = false; }
-            if (!inUl) { html.push('<ul>'); inUl = true; }
-            html.push('<li>' + inline(trimmed.replace(/^[-*+]\s+/, '')) + '</li>');
-            return;
-          }
-
-          if (/^\d+\.\s+/.test(trimmed)) {
-            if (inUl) { html.push('</ul>'); inUl = false; }
-            if (!inOl) { html.push('<ol>'); inOl = true; }
-            html.push('<li>' + inline(trimmed.replace(/^\d+\.\s+/, '')) + '</li>');
-            return;
-          }
-
-          closeLists();
-          html.push('<p>' + inline(trimmed) + '</p>');
-        });
-
-        if (inCode) html.push('<pre><code>' + escapeHtml(codeBuf.join('\n')) + '</code></pre>');
-        closeLists();
-        return { html: html.join('\n'), headings: headings };
-      }
-
-      function updateToc(headings) {
-        var visible = headings.filter(function (h) { return h.level > 1 && h.level < 4; });
-        tocEl.innerHTML = visible.map(function (h) {
-          return '<a href="#' + h.id + '" style="padding-left:' + (h.level === 3 ? 22 : 10) + 'px">' + escapeHtml(h.text) + '</a>';
-        }).join('') || '<a href="#">Overview</a>';
-      }
-
-      function load(lang) {
-        current = lang;
-        zhBtn.classList.toggle('active', lang === 'zh');
-        enBtn.classList.toggle('active', lang === 'en');
-        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-        var file = lang === 'zh' ? 'README.md' : 'README.en.md';
-        mdEl.innerHTML = 'Loading ' + file + '...';
-        fetch(file + '?ts=' + Date.now())
-          .then(function (res) {
-            if (!res.ok) throw new Error('HTTP ' + res.status);
-            return res.text();
-          })
-          .then(function (text) {
-            var rendered = renderMarkdown(text);
-            mdEl.innerHTML = rendered.html;
-            updateToc(rendered.headings);
-          })
-          .catch(function (err) {
-            mdEl.innerHTML = '<div class="error">无法读取 ' + file + '：' + escapeHtml(err.message || err) + '</div>';
-            tocEl.innerHTML = '';
-          });
-      }
-
-      zhBtn.addEventListener('click', function () { load('zh'); });
-      enBtn.addEventListener('click', function () { load('en'); });
-      if (menuBtn) menuBtn.addEventListener('click', function () { sidebar.classList.toggle('open'); });
-      load(current);
-    })();
+    // Floating Particles Effect
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'particles';
+    document.body.prepend(particlesContainer);
+    
+    for (let i = 0; i < 25; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 3 + 1;
+      p.style.width = `${size}px`;
+      p.style.height = `${size}px`;
+      p.style.left = `${Math.random() * 100}vw`;
+      p.style.animationDuration = `${Math.random() * 15 + 10}s`;
+      p.style.animationDelay = `${Math.random() * 10}s`;
+      particlesContainer.appendChild(p);
+    }
   </script>
 </body>
 </html>
