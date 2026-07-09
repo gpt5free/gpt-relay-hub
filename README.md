@@ -1,3 +1,13 @@
+## 快速入口
+
+| 入口 | 地址 |
+| --- | --- |
+| GPT5.6通道 | https://pay.kklt.lol/ |
+| Claude4.8通道 | https://fuckme.443.hk/ |
+| 打开 Free2AI 免费导航 | https://free2ai.pages.dev/ |
+| 电报客服咨询 | https://t.me/kkscshop |
+
+
 ﻿# Free2AI 免费 GPT5.5 AI 中转站集群
 
 Free2AI 是一个专注于免费、白嫖友好、超低价 AI 中转资源的导航入口，适合想快速体验 GPT5.5、ChatGPT relay、OpenAI relay、AIGC 和 AI proxy 的用户。
